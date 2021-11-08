@@ -1,0 +1,68 @@
+.App {
+  text-align: right;
+  height: 1200px;
+  width: 1200px;
+}
+
+.LandingPage {
+  height: 800px;
+  width: 2000px;
+  /* background-image: url(""); */
+}
+
+.Contacts {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+.dashInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  .dashContacts {
+  flex: 1;
+  margin: 0px 20px;
+  padding: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+  box-shadow: 5px 5px 15px 5px #000000;
+  font-size: 20px;
+  font-weight: bold;
+  }
+  
+  .dashGroups {
+  flex: 2;
+  margin: 0px 20px;
+  padding: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+  box-shadow: 5px 5px 15px 5px #000000;
+  font-size: 20px;
+  font-weight: bold;
+  }
+  
+  .dashMessages{
+  flex: 3;
+  margin: 0px 20px;
+  padding: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+  box-shadow: 5px 5px 15px 5px #000000;
+  font-size: 20px;
+  font-weight: bold;
+  }
