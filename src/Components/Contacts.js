@@ -13,6 +13,7 @@ class Contacts extends React.Component {
                             <p>{contact.name}</p>
                             <p>{contact.number}</p>
                         </div>
+                        
                     )
                 })}
             </div>

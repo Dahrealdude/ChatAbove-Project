@@ -6,54 +6,46 @@ import Dashboard from './Components/Dashboard';
 import PageNotFound from './Components/PageNotFound';
 
 import {
-  BrowserRouter as Router,
   Link,
   Route,
-  Routes
+  Routes,
+  Outlet,
 } from 'react-router-dom';
-
 
 function App() {
   return (
     <div className="App">
-      <Router> 
         <nav>
           <ul>
             <li>
-              <Link to="/" exact>Home</Link>
+              <Link to="/">Home</Link>
             </li>
 
             <li>
-              <Link to="/contacts" exact>Contacts</Link>
+              <Link to="/contacts">Contacts</Link>
             </li>
             <li>
-              <Link to="/dashboard" exact>Dashboard</Link>
-            </li>
-
-            <li>
-              <Link to="/signin" exact>Sign-In</Link>
+              <Link to="/dashboard">Dashboard</Link>
             </li>
 
             <li>
-              <Link to="/landingpage" exact>Index</Link>
+              <Link to="/signin">Sign-In</Link>
+            </li>
+
+            <li>
+              <Link to="/landingpage">Index</Link>
             </li>
           </ul>
         </nav>
+        <Outlet/>
       
         <Routes>
-
-            <Route path='/signin' component={SignIn} />
-            
-            <Route path='/contacts' component={Contacts} />
-
-            <Route path='/dashboard' component={Dashboard} />
-      
-            <Route path='/landingpage' component={LandingPage} />
-            
-            <Route path='/*' component={PageNotFound} />
-            
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/*" element={<PageNotFound />} />
         </Routes>
-        </Router> 
   </div>
   
   );
