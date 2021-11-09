@@ -66,3 +66,31 @@ nav li {
   font-size: 20px;
   font-weight: bold;
   }
+
+  button {
+    width: 180px;
+    margin: auto;
+    margin-top: 25px;
+    color: #fff;
+    background: #42b721;
+    border: 1px solid #42b72a;
+    outline: none;
+    font-size: 16px;
+    padding: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+input {
+  padding: 16px;
+  border: 1px solid #d4def3;
+  border-radius:7px;
+  outline:none;
+  margin-bottom:10px;
+}
+
+form {
+  border:0.1rem solid #cfcfcf;
+  padding: 1rem;
+}
