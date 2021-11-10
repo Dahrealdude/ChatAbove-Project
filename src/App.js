@@ -4,6 +4,7 @@ import LandingPage from './Components/LandingPage';
 import SignIn from './Components/SignIn';
 import Dashboard from './Components/Dashboard';
 import PageNotFound from './Components/PageNotFound';
+import Home from './Components/Home';
 
 import {
   Link,
@@ -18,7 +19,7 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/home">Home</Link>
             </li>
 
             <li>
@@ -40,10 +41,11 @@ function App() {
         <Outlet/>
       
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/landingpage" element={<LandingPage />} />
           <Route path="/*" element={<PageNotFound />} />
         </Routes>
   </div>
