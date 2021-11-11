@@ -12,8 +12,8 @@ class MessagesList extends React.Component {
                     <button className="btn-1"></button>
                 </div>
                 <div className="searchbar">
-                    <input type="text" placeholder="Search" required/>
-                    <button classname="search-btn"></button>
+                    <input className="search-input" type="text" placeholder="Search Messages" required/>
+                    <button className="search-btn">Search</button>
                 </div>
             </div>
         )
