@@ -4,7 +4,7 @@ import Data from '../API/Data';
 class Contacts extends React.Component {
     render(){
         return (
-            <div>
+            <div className= "Contacts">
                 <h1>Contacts</h1>
                 {Data.map(function(contact) {
                     return (
