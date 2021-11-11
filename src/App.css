@@ -11,12 +11,19 @@
 }
 
 .Contacts {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-right: 30%;
-  margin-left: 30%;
+  display: flex;
+  flex: left;
+  gap: 30px;
+  
+  /* flex-direction: row; */
+  /* justify-content: center;
+  align-items: center; */
+  /* margin-right: 30%;
+  margin-left: 30%; */
+} 
+
+.nav {
+  text-align: center;
 }
 
 nav{
@@ -27,13 +34,10 @@ nav ul{
   display:flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 30%;
-  margin-left: 30%;
 }
 
 nav li {
   list-style-type: none;
- 
 }
 
 .dashInfo {

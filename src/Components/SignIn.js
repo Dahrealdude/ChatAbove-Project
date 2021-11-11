@@ -3,7 +3,7 @@ import React from 'react';
 export default function SignIn(){
     return(
         <div className="nav">
-            <form>
+            <form className="form">
                 <input placeholder="email"></input><br></br>
                 <input placeholder="password"></input><br></br>
                 <button>Sign In</button><br></br>
