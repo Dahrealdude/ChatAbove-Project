@@ -13,9 +13,37 @@ import {
   Outlet,
 } from 'react-router-dom';
 
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, getDocs, setDoc, doc } from 'firebase/firestore/lite';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBhkcx5GC4kOl9JN7_s4ucOuqm9C88mJwo",
+  authDomain: "chat-above.firebaseapp.com",
+  projectId: "chat-above",
+  storageBucket: "chat-above.appspot.com",
+  messagingSenderId: "354920370304",
+  appId: "1:354920370304:web:79770d9d79f0528b459665",
+  measurementId: "G-FF5XFCRT58"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const DB = getFirestore(app);
+
+function addData(){
+  setDoc(doc(DB, "contacts", "number"), {
+    name: "Ashley Peart",
+    number: 6784998803,
+    groups: ["Group1"]
+  });
+}
+
+
+
 function App() {
   return (
     <div className="App">
+      <button onClick={addData}>Add Data</button>
         <nav>
           <ul>
             <li>
