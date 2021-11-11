@@ -5,6 +5,7 @@ import SignIn from './Components/SignIn';
 import Dashboard from './Components/Dashboard';
 import PageNotFound from './Components/PageNotFound';
 import Home from './Components/Home';
+import Messages from './Components/Messages'
 
 import {
   Link,
@@ -64,6 +65,10 @@ function App() {
             <li>
               <Link to="/landingpage">Index</Link>
             </li>
+
+            <li>
+              <Link to="/messages">Messages</Link>
+            </li>
           </ul>
         </nav>
         <Outlet/>
@@ -74,6 +79,7 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/landingpage" element={<LandingPage />} />
+          <Route path="/messages" element={<Messages />} />
           <Route path="/*" element={<PageNotFound />} />
         </Routes>
   </div>
