@@ -6,6 +6,8 @@ import Dashboard from './Components/Dashboard';
 import PageNotFound from './Components/PageNotFound';
 import Home from './Components/Home';
 import Messages from './Components/Messages'
+import NewContact from './Components/NewContact'
+import Groups from './Components/Groups'
 
 import {
   Link,
@@ -31,20 +33,20 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const DB = getFirestore(app);
 
-function addData(){
-  setDoc(doc(DB, "contacts", "number"), {
-    name: "Ashley Peart",
-    number: 6784998803,
-    groups: ["Group1"]
-  });
-}
+// function addData(){
+//   setDoc(doc(DB, "contacts", "number"), {
+//     name: "Ashley Peart",
+//     number: 6784998803,
+//     groups: ["Group1"]
+//   });
+// }
 
 
 
 function App() {
   return (
     <div className="App">
-      <button onClick={addData}>Add Data</button>
+      {/* <button onClick={addData}>Add Data</button> */}
         <nav>
           <ul>
             <li>
@@ -69,6 +71,12 @@ function App() {
             <li>
               <Link to="/messages">Messages</Link>
             </li>
+            <li>
+              <Link to="/newcontact">New Contact</Link>
+            </li>
+            <li>
+              <Link to="/groups">Groups</Link>
+            </li>
           </ul>
         </nav>
         <Outlet/>
@@ -80,6 +88,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/landingpage" element={<LandingPage />} />
           <Route path="/messages" element={<Messages />} />
+          <Route path="/newcontact" element={<NewContact DB={DB}/>} />
+          <Route path="/groups" element={<Groups DB={DB}/>} />
           <Route path="/*" element={<PageNotFound />} />
         </Routes>
   </div>

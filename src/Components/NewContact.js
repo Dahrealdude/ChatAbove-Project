@@ -1,3 +1,6 @@
+import React from "react"
+import { setDoc, doc } from "firebase/firestore/lite";
+
 class NewContact extends React.Component {
     constructor(props) {
         super(props);
@@ -9,6 +12,8 @@ class NewContact extends React.Component {
         this._updatefullName = this._updatefullName.bind(this)
         this._updatephoneNumber = this._updatephoneNumber.bind(this)
         this._updaterelationship = this._updaterelationship.bind(this)
+        this._addContact = this._addContact.bind(this)
+        
 
     }
     render() {
@@ -21,11 +26,12 @@ class NewContact extends React.Component {
                     <input type="text" value={this.state.phoneNumber} onChange={this._updatephoneNumber} placeholder="Enter phone number"/>
                 </div>
                 <div>
-                    <input type="text" value={this.state.relationship} onchange={this._updaterelationship} placeholder="How do you know this person"/>
+                    <input type="text" value={this.state.relationship} onChange={this._updaterelationship} placeholder="How do you know this person"/>
                 </div>
                 <p>{this.state.fullName}</p>
                 <p>{this.state.phoneNumber}</p>
                 <p>{this.state.relationship}</p>
+                <button onClick={this._addContact}>Add contact</button>
             </div>
         )
     }
@@ -38,9 +44,22 @@ class NewContact extends React.Component {
     _updaterelationship(event) {
         this.setState({relationship: event.target.value})
     }
-    
+    _addContact() {
+        setDoc(doc(this.props.DB, "contacts", this.state.phoneNumber), {
+            fullName: this.state.fullName,
+            phoneNumber: this.state.phoneNumber,
+            relationship: this.state.relationship,
+            groups:[]
+        });
+        this.setState({
+            fullName: "",
+            phoneNumber: "",
+            relationship: "",
+        })
+    }
 }
 
+export default NewContact
 
 
 /**"New Contact" text with a cancel and done option
