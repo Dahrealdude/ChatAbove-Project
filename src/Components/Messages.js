@@ -1,4 +1,3 @@
-
 /**"Messages"
  * Search bar
  * List of messages with scroll

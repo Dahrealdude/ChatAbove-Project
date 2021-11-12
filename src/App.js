@@ -1,7 +1,6 @@
 import './App.css';
 import Contacts from './Components/Contacts';
 import LandingPage from './Components/LandingPage';
-import SignIn from './Components/SignIn';
 import Dashboard from './Components/Dashboard';
 import PageNotFound from './Components/PageNotFound';
 import Home from './Components/Home';
@@ -18,6 +17,7 @@ import {
 
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, setDoc, doc } from 'firebase/firestore/lite';
+import NewMessage from './Components/NewMessage';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBhkcx5GC4kOl9JN7_s4ucOuqm9C88mJwo",
@@ -47,53 +47,59 @@ function App() {
   return (
     <div className="App">
       {/* <button onClick={addData}>Add Data</button> */}
-        <nav>
-          <ul>
-            <li>
-              <Link to="/home">Home</Link>
-            </li>
+      <nav>
+        <ul>
 
-            <li>
-              <Link to="/contacts">Contacts</Link>
-            </li>
-            <li>
-              <Link to="/dashboard">Dashboard</Link>
-            </li>
+          <li>
+            <Link to="/home">Home</Link>
+          </li>
 
-            <li>
-              <Link to="/signin">Sign-In</Link>
-            </li>
+          <li>
+            <Link to="/contacts">Contacts</Link>
+          </li>
 
-            <li>
-              <Link to="/landingpage">Index</Link>
-            </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
 
-            <li>
-              <Link to="/messages">Messages</Link>
-            </li>
-            <li>
-              <Link to="/newcontact">New Contact</Link>
-            </li>
-            <li>
-              <Link to="/newgroup">New Group</Link>
-            </li>
-          </ul>
-        </nav>
+          <li>
+            <Link to="/landingpage">Sign In</Link>
+          </li>
+
+          <li>
+            <Link to="/messages">Messages</Link>
+          </li>
+
+          <li>
+            <Link to="/newcontact">New Contact</Link>
+          </li>
+
+          <li>
+            <Link to="/newgroup">New Group</Link>
+          </li>
+
+          <li>
+            <Link to="/newmessage">New Message</Link>
+          </li>
+
+        </ul>
+      </nav>
+      
         <Outlet/>
       
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/landingpage" element={<LandingPage />} />
-          <Route path="/messages" element={<Messages />} />
-          <Route path="/newcontact" element={<NewContact DB={DB}/>} />
-          <Route path="/newgroup" element={<NewGroup DB={DB}/>} />
-          <Route path="/*" element={<PageNotFound />} />
-          
-        </Routes>
-  </div>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/landingpage" element={<LandingPage DB={DB}/>} />
+        <Route path="/messages" element={<Messages />} />
+        <Route path="/newcontact" element={<NewContact DB={DB}/>} />
+        <Route path="/newgroup" element={<NewGroup DB={DB}/>} />
+        <Route path="/newmessage" element={<NewMessage DB={DB}/>} />
+        <Route path="/*" element={<PageNotFound />} />
+      </Routes>
+
+    </div>
   
   );
 }
