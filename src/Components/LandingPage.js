@@ -1,16 +1,66 @@
-import React from 'react'
+import React from "react"
+import { setDoc, doc } from "firebase/firestore/lite";
 
 class LandingPage extends React.Component {
-    render(){
-        return (
-            <div className="LandingPage">
-                <h1>A Chat Above</h1>
+    constructor(props) {
+        super(props);
 
+        this.state = {
+            userEmail: "",
+            userPassword: "",
+        }
+
+        this._updateuserEmail = this._updateuserEmail.bind(this)
+        this._updateuserPassword = this._updateuserPassword.bind(this)
+        this._addLogin = this._addLogin.bind(this)
+
+    }
+
+    render() {
+        return(
+            <div className="nav">
+                <form className="form">
+                    <div>
+                        <input type="text" value={this.state.userEmail} onChange={this._updateuserEmail} placeholder="Email"/>   
+                    </div>
+
+                    <div>
+                        <input type="text" value={this.state.userPassword} onChange={this._updateuserPassword} placeholder="Password"/>
+                    </div>
+                </form>
+                
+                <p>{this.state.userEmail}</p>
+                <p>{this.state.userPassword}</p>
+                <button className="button" onClick={this._addLogin}>Login</button>
             </div>
         )
     }
+
+    _updateuserEmail(event) {
+        this.setState({userEmail: event.target.value})
+    }
+
+    _updateuserPassword(event) {
+        this.setState({userPassword: event.target.value})
+    }
+
+
+    _addLogin() {
+
+        setDoc(doc(this.props.DB, "Login", this.state.userEmail), {
+            userEmail: this.state.userEmail,
+            userPassword: this.state.userPassword,
+            groups:[]
+        });
+        
+        this.setState({
+            userEmail: "",
+            userPassword: "",
+        })
+    }
 }
-export default LandingPage;
+
+export default LandingPage
 
 /**Logo 
  * Welcome
