@@ -7,7 +7,7 @@ import PageNotFound from './Components/PageNotFound';
 import Home from './Components/Home';
 import Messages from './Components/Messages'
 import NewContact from './Components/NewContact'
-import Groups from './Components/Groups'
+import NewGroup from './Components/NewGroup'
 
 import {
   Link,
@@ -75,7 +75,7 @@ function App() {
               <Link to="/newcontact">New Contact</Link>
             </li>
             <li>
-              <Link to="/groups">Groups</Link>
+              <Link to="/newgroup">New Groups</Link>
             </li>
           </ul>
         </nav>
@@ -89,8 +89,9 @@ function App() {
           <Route path="/landingpage" element={<LandingPage />} />
           <Route path="/messages" element={<Messages />} />
           <Route path="/newcontact" element={<NewContact DB={DB}/>} />
-          <Route path="/groups" element={<Groups DB={DB}/>} />
+          <Route path="/newgroup" element={<NewGroup DB={DB}/>} />
           <Route path="/*" element={<PageNotFound />} />
+          
         </Routes>
   </div>
   

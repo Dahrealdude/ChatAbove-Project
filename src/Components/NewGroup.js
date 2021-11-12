@@ -1,7 +1,7 @@
 import React from "react";
 import { setDoc, doc } from "firebase/firestore/lite";
 
-class Groups extends React.Component {
+class NewGroup extends React.Component {
     constructor(props) {
         super(props);
 
@@ -11,7 +11,7 @@ class Groups extends React.Component {
             groupMember: "",
         }
         this._updateGroupName = this._updateGroupName.bind(this);
-        this._updateGroupNumber = this._updateMemberNumber.bind(this);
+        this._updateMemberNumber = this._updateMemberNumber.bind(this);
         this._updateGroupMember = this._updateGroupMember.bind(this);
         this._addGroup = this._addGroup.bind(this);
     
@@ -62,7 +62,7 @@ class Groups extends React.Component {
     }
 }
 
-export default Groups
+export default NewGroup
 
 /**"New Group" text with a cancel and done option
  * Add photo option
