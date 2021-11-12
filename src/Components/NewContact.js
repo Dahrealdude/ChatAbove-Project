@@ -10,6 +10,7 @@ class NewContact extends React.Component {
             phoneNumber: "",
             relationship: "",
         }
+
         this._updatefullName = this._updatefullName.bind(this)
         this._updatephoneNumber = this._updatephoneNumber.bind(this)
         this._updaterelationship = this._updaterelationship.bind(this)
@@ -17,6 +18,7 @@ class NewContact extends React.Component {
         
 
     }
+
     render() {
         return(
             <div>
@@ -33,26 +35,32 @@ class NewContact extends React.Component {
                 <p>{this.state.fullName}</p>
                 <p>{this.state.phoneNumber}</p>
                 <p>{this.state.relationship}</p>
-                <button onClick={this._addContact}>Add contact</button>
+                <button onClick={this._addContact}>Add Contact</button>
             </div>
         )
     }
+
     _updatefullName(event) {
         this.setState({fullName: event.target.value})
     }
+
     _updatephoneNumber(event) {
         this.setState({phoneNumber: event.target.value})
     }
+
     _updaterelationship(event) {
         this.setState({relationship: event.target.value})
     }
+
     _addContact() {
+
         setDoc(doc(this.props.DB, "contacts", this.state.phoneNumber), {
             fullName: this.state.fullName,
             phoneNumber: this.state.phoneNumber,
             relationship: this.state.relationship,
             groups:[]
         });
+        
         this.setState({
             fullName: "",
             phoneNumber: "",
