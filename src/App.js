@@ -75,7 +75,7 @@ function App() {
               <Link to="/newcontact">New Contact</Link>
             </li>
             <li>
-              <Link to="/newgroup">New Groups</Link>
+              <Link to="/newgroup">New Group</Link>
             </li>
           </ul>
         </nav>
