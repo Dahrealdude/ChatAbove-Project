@@ -167,3 +167,35 @@ form {
   border-radius: 5px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.02);
 }
+
+.groupname{
+  margin-left: 300px;
+}
+
+.groupmember{
+  margin-left: 300px;
+}
+
+.membernumber{
+  margin-left: 300px;
+}
+
+.group-btn {
+  margin-left: 300px
+}
+
+.fullname {
+  margin-left: 300px
+}
+
+.phonenumber {
+  margin-left: 300px
+}
+
+.relationship {
+  margin-left: 300px
+}
+
+.contact-btn {
+  margin-left: 300px
+}

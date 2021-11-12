@@ -22,16 +22,16 @@ class NewGroup extends React.Component {
     render() {
         return(
             <div>
-                
-                <div>
+                <h2 className="newgroup">New Group</h2>
+                <div className="groupname">
                     <input type="text" value={this.state.groupName} onChange={this._updateGroupName} placeholder="Enter your group name"/>
                 </div>
 
-                <div>
+                <div className="groupmember">
                     <input type="text" value={this.state.groupMember} onChange={this._updateGroupMember} placeholder="Enter member name"/>
                 </div>
 
-                <div>
+                <div className="membernumber">
                     <input type="text" value={this.state.memberNumber} onChange={this._updateMemberNumber} placeholder="Add member number"/>
                 </div>
 
@@ -39,7 +39,7 @@ class NewGroup extends React.Component {
                 <p>{this.state.groupMember}</p>
                 <p>{this.state.memberNumber}</p>
 
-                <button onClick={this._addGroup}>Add Group</button>
+                <button className="group-btn" onClick={this._addGroup}>Add Group</button>
             </div>
         )
     }
