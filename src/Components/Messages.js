@@ -27,6 +27,13 @@ class Messages extends React.Component {
                     <p>{this.state.searchBar}</p>
                     <button className="button" onClick={this._addSearch}>Search</button>
                 </form>
+                <div>
+                
+                <div className='dashInfo'>
+                    <span className='dashMessages'>Messages<p></p></span>
+                </div>
+
+                </div>
             </div>
         )
     }
@@ -39,7 +46,7 @@ class Messages extends React.Component {
 
         setDoc(doc(this.props.DB, "Searched", this.state.searchBar), {
             searchBar: this.state.searchBar,
-            searchHistory:[]
+            groups:[]
         });
         
         this.setState({
