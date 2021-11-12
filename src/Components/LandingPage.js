@@ -19,6 +19,7 @@ class LandingPage extends React.Component {
     render() {
         return(
             <div className="nav">
+                <h2>Sign In</h2>
                 <form className="form">
                     <div>
                         <input type="text" value={this.state.userEmail} onChange={this._updateuserEmail} placeholder="Email"/>   

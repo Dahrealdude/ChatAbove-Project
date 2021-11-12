@@ -22,20 +22,21 @@ class NewMessage extends React.Component {
     render() {
         return(
             <div>
-                <div>
+                <h2>New Message</h2>
+                <div className="name">
                     <input type="text" value={this.state.fullName} onChange={this._updatefullName} placeholder="Enter full name"/>   
                 </div>
-                <div>
+                <div className="number">
                     <input type="text" value={this.state.phoneNumber} onChange={this._updatephoneNumber} placeholder="Enter phone number"/>
                 </div>
-                <div>
+                <div className="message">
                     <input type="text" value={this.state.newMessage} onChange={this._updatenewMessage} placeholder="Enter new message"/>
                 </div>
                 
                 <p>{this.state.fullName}</p>
                 <p>{this.state.phoneNumber}</p>
                 <p>{this.state.newMessage}</p>
-                <button onClick={this._addMessage}>Send</button>
+                <button className="message-btn" onClick={this._addMessage}>Send</button>
             </div>
         )
     }
