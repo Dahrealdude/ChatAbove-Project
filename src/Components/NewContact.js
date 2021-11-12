@@ -36,7 +36,7 @@ class NewContact extends React.Component {
                 <p>{this.state.fullName}</p>
                 <p>{this.state.phoneNumber}</p>
                 <p>{this.state.relationship}</p>
-                <button className="contact-btn" onClick={this._addContact}>Add Contact</button>
+                <button className="button"  onClick={this._addContact}>Add Contact</button>
             </div>
         )
     }

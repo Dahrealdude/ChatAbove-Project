@@ -92,7 +92,7 @@ function App() {
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/landingpage" element={<LandingPage DB={DB}/>} />
-        <Route path="/messages" element={<Messages />} />
+        <Route path="/messages" element={<Messages DB={DB}/>}/>
         <Route path="/newcontact" element={<NewContact DB={DB}/>} />
         <Route path="/newgroup" element={<NewGroup DB={DB}/>} />
         <Route path="/newmessage" element={<NewMessage DB={DB}/>} />
