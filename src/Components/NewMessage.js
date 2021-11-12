@@ -22,6 +22,7 @@ class NewMessage extends React.Component {
     render() {
         return(
             <div>
+                <h1>Messages</h1>
                 <div>
                     <input type="text" value={this.state.fullName} onChange={this._updatefullName} placeholder="Enter full name"/>   
                 </div>
@@ -35,7 +36,7 @@ class NewMessage extends React.Component {
                 <p>{this.state.fullName}</p>
                 <p>{this.state.phoneNumber}</p>
                 <p>{this.state.newMessage}</p>
-                <button onClick={this._addMessage}>Send</button>
+                <button className="button" onClick={this._addMessage}>Send</button>
             </div>
         )
     }

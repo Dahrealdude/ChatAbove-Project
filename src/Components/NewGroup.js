@@ -39,7 +39,7 @@ class NewGroup extends React.Component {
                 <p>{this.state.groupMember}</p>
                 <p>{this.state.memberNumber}</p>
 
-                <button className="group-btn" onClick={this._addGroup}>Add Group</button>
+                <button className="button"  onClick={this._addGroup}>Add Group</button>
             </div>
         )
     }
