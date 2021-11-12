@@ -23,11 +23,12 @@ class Groups extends React.Component {
                     <input type="text" value={this.state.groupName} onChange={this._updateGroupName} placeholder="Name your group"/>
                 </div>
                 <div>
-                    <input type="text" value={this.state.groupMember} onChange={this._updateGroupMember} placeholder="Add new member"/>
-                </div>
-                <div>
                 <input type="text" value={this.state.memberNumber} onChange={this._updateMemberNumber} placeholder="Add member number"/>
                 </div>
+                <div>
+                    <input type="text" value={this.state.groupMember} onChange={this._updateGroupMember} placeholder="Add new member"/>
+                </div>
+                
                 <p>{this.state.groupName}</p>
                 <p>{this.state.memberNumber}</p>
                 <p>{this.state.groupMember}</p>
@@ -38,23 +39,24 @@ class Groups extends React.Component {
     _updateGroupName(event) {
         this.setState({groupName: event.target.value})
     }
-    _updateGroupMember(event) {
-        this.setState({groupMember:event.target.value})
-    }
     _updateMemberNumber(event) {
-        this.setState({memberNumber:event.target.value})
+        this.setState({memberNumber: event.target.value})
     }
+    _updateGroupMember(event) {
+        this.setState({groupMember: event.target.value})
+    }
+    
     _addGroup() {
         setDoc(doc(this.props.DB, "groups", this.state.groupName), {
             groupName:this.state.groupName,
-            groupMember: this.state.groupMember,
             memberNumber:this.state.memberNumber,
+            groupMember: this.state.groupMember,
             groups:[]
         });
         this.setState({
             groupName: "",
-            groupMember: "",
             memberNumber: "",
+            groupMember: "",
         })
     }
 }
