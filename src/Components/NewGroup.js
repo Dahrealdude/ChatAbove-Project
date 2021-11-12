@@ -59,7 +59,7 @@ class NewGroup extends React.Component {
   
     _addGroup() {
 
-        setDoc(doc(this.props.DB, "new group", this.state.groupName), {
+        setDoc(doc(this.props.DB, "New Group", this.state.groupName), {
             groupName:this.state.groupName,
             groupMember: this.state.groupMember,
             memberNumber:this.state.memberNumber,

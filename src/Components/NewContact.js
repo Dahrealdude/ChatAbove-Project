@@ -54,7 +54,7 @@ class NewContact extends React.Component {
 
     _addContact() {
 
-        setDoc(doc(this.props.DB, "contacts", this.state.phoneNumber), {
+        setDoc(doc(this.props.DB, "Contacts", this.state.fullName), {
             fullName: this.state.fullName,
             phoneNumber: this.state.phoneNumber,
             relationship: this.state.relationship,
