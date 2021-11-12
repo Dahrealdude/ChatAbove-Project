@@ -22,20 +22,21 @@ class NewContact extends React.Component {
     render() {
         return(
             <div>
-                <div>
+                <h2>New Contact</h2>
+                <div className="fullname">
                     <input type="text" value={this.state.fullName} onChange={this._updatefullName} placeholder="Enter full name"/>   
                 </div>
-                <div>
+                <div className="phonenumber">
                     <input type="text" value={this.state.phoneNumber} onChange={this._updatephoneNumber} placeholder="Enter phone number"/>
                 </div>
-                <div>
+                <div className="relationship">
                     <input type="text" value={this.state.relationship} onChange={this._updaterelationship} placeholder="How do you know this person"/>
                 </div>
                 
                 <p>{this.state.fullName}</p>
                 <p>{this.state.phoneNumber}</p>
                 <p>{this.state.relationship}</p>
-                <button onClick={this._addContact}>Add Contact</button>
+                <button className="contact-btn" onClick={this._addContact}>Add Contact</button>
             </div>
         )
     }

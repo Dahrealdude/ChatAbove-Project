@@ -91,6 +91,7 @@ function App() {
           <Route path="/newcontact" element={<NewContact DB={DB}/>} />
           <Route path="/newgroup" element={<NewGroup DB={DB}/>} />
           <Route path="/*" element={<PageNotFound />} />
+          
         </Routes>
   </div>
   
