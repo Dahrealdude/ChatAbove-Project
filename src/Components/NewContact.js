@@ -12,6 +12,8 @@ class NewContact extends React.Component {
         this._updatefullName = this._updatefullName.bind(this)
         this._updatephoneNumber = this._updatephoneNumber.bind(this)
         this._updaterelationship = this._updaterelationship.bind(this)
+        this._addContact = this._addContact.bind(this)
+        
 
     }
     render() {

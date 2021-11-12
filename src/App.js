@@ -88,8 +88,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/landingpage" element={<LandingPage />} />
           <Route path="/messages" element={<Messages />} />
-          <Route path="/newcontact" element={<NewContact />} />
-          <Route path="/groups" element={<Groups />} />
+          <Route path="/newcontact" element={<NewContact DB={DB}/>} />
+          <Route path="/groups" element={<Groups DB={DB}/>} />
           <Route path="/*" element={<PageNotFound />} />
         </Routes>
   </div>
