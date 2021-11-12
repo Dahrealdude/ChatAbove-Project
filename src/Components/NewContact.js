@@ -4,6 +4,7 @@ import { setDoc, doc } from "firebase/firestore/lite";
 class NewContact extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             fullName: "",
             phoneNumber: "",
@@ -28,6 +29,7 @@ class NewContact extends React.Component {
                 <div>
                     <input type="text" value={this.state.relationship} onChange={this._updaterelationship} placeholder="How do you know this person"/>
                 </div>
+                
                 <p>{this.state.fullName}</p>
                 <p>{this.state.phoneNumber}</p>
                 <p>{this.state.relationship}</p>
