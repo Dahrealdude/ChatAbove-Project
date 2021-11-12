@@ -22,9 +22,9 @@ class NewMessage extends React.Component {
     render() {
         return(
             <div>
-                <h1>Messages</h1>
+                <h2>New Messages</h2>
                 <div>
-                    <input type="text" value={this.state.fullName} onChange={this._updatefullName} placeholder="Enter full name"/>   
+                    <input className="name" type="text" value={this.state.fullName} onChange={this._updatefullName} placeholder="Enter full name"/>   
                 </div>
                 <div className="number">
                     <input type="text" value={this.state.phoneNumber} onChange={this._updatephoneNumber} placeholder="Enter phone number"/>
