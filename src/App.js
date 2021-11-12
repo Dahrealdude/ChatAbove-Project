@@ -69,7 +69,7 @@ function App() {
             </li>
 
             <li>
-              <Link to="/messages">Messages</Link>
+              {/* <Link to="/messages">Messages</Link> */}
             </li>
             <li>
               <Link to="/newcontact">New Contact</Link>
@@ -87,7 +87,7 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/landingpage" element={<LandingPage />} />
-          <Route path="/messages" element={<Messages />} />
+          {/* <Route path="/messages" element={<Messages />} /> */}
           <Route path="/newcontact" element={<NewContact DB={DB}/>} />
           <Route path="/newgroup" element={<NewGroup DB={DB}/>} />
           <Route path="/*" element={<PageNotFound />} />
