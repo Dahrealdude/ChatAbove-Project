@@ -15,11 +15,19 @@
   flex: left;
   gap: 30px;
   
-  /* flex-direction: row; */
-  /* justify-content: center;
-  align-items: center; */
-  /* margin-right: 30%;
+  
+  /* flex-direction: row;
+  justify-content: center; 
+  align-items: center; 
+  margin-right: 30%; 
   margin-left: 30%; */
+} 
+
+.Search {
+  display:flex;
+  flex: left;
+  justify-content: space-between;
+  align-items: center;
 } 
 
 .nav {
@@ -32,6 +40,7 @@ nav{
 
 nav ul{
   display:flex;
+  flex: left;
   justify-content: space-between;
   align-items: center;
 }
@@ -80,8 +89,6 @@ nav li {
 }
 
 
-
-
 .button {
   width: 180px;
   margin: auto;
@@ -116,7 +123,7 @@ form {
   align-items: center;
 }
 
-.search-btn {
+/* .search-btn {
   height: 35px;
   border: rgb(249, 249, 252) solid 2px;
   background-color: rgb(156, 195, 247);
@@ -127,7 +134,7 @@ form {
   border-radius: 5px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.02);
   margin: 10px;
-}
+} */
 
 .btn-1{
   background-color: transparent;
@@ -169,7 +176,7 @@ form {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.02);
 }
 
-.groupname, .groupmember, .membernumber, .group-btn{
+/* .groupname, .groupmember, .membernumber, .group-btn{
   margin-left: 300px;
 }
 
@@ -179,4 +186,4 @@ form {
 
 .name, .number, .message, .message-btn{
   margin-left: 300px
-}
+} */

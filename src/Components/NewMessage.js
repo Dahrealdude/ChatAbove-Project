@@ -1,5 +1,10 @@
 import React from "react"
 import { setDoc, doc } from "firebase/firestore/lite";
+import {
+    Link,
+    Outlet
+  } from 'react-router-dom';
+
 
 class NewMessage extends React.Component {
     constructor(props) {
@@ -22,21 +27,73 @@ class NewMessage extends React.Component {
     render() {
         return(
             <div>
-                <h2>New Messages</h2>
                 <div>
-                    <input className="name" type="text" value={this.state.fullName} onChange={this._updatefullName} placeholder="Enter full name"/>   
-                </div>
-                <div className="number">
-                    <input type="text" value={this.state.phoneNumber} onChange={this._updatephoneNumber} placeholder="Enter phone number"/>
-                </div>
-                <div className="message">
-                    <input type="text" value={this.state.newMessage} onChange={this._updatenewMessage} placeholder="Enter new message"/>
-                </div>
+                    <div className='header'>
+                        <h1>A Chat Above</h1>
+                    </div>
                 
-                <p>{this.state.fullName}</p>
-                <p>{this.state.phoneNumber}</p>
-                <p>{this.state.newMessage}</p>
-                <button className="button" onClick={this._addMessage}>Send</button>
+                    <nav className='topnav'>
+                        <ul>
+
+                            <li>
+                                <Link to="/home">Home</Link>
+                            </li>
+
+                            <li>
+                                <Link to="/contacts">Contacts</Link>
+                            </li>
+
+                            <li>
+                                <Link to="/dashboard">Dashboard</Link>
+                            </li>
+
+                            <li>
+                                <Link to="/messages">Messages</Link>
+                            </li>
+
+                            <li>
+                                <Link to="/newcontact">New Contact</Link>
+                            </li>
+
+                            <li>
+                                <Link to="/newgroup">New Group</Link>
+                            </li>
+
+                            <li>
+                                <Link to="/newmessage">New Message</Link>
+                            </li>
+
+                        </ul>
+                    </nav>
+                    
+                    <Outlet/>
+                </div>
+
+                <h1>New Messages</h1>
+
+                <div className="nav">
+                    <form className="form">
+
+                        <div>
+                            <input className="name" type="text" value={this.state.fullName} onChange={this._updatefullName} placeholder="Enter full name"/>   
+                        </div>
+
+                        <div className="number">
+                            <input type="text" value={this.state.phoneNumber} onChange={this._updatephoneNumber} placeholder="Enter phone number"/>
+                        </div>
+
+                        <div className="message">
+                            <input type="text" value={this.state.newMessage} onChange={this._updatenewMessage} placeholder="Enter new message"/>
+                        </div>
+                        
+                        <p>{this.state.fullName}</p>
+                        <p>{this.state.phoneNumber}</p>
+                        <p>{this.state.newMessage}</p>
+                        <button className="button" onClick={this._addMessage}>Send</button>
+                        
+                    </form>
+                </div> 
+
             </div>
         )
     }

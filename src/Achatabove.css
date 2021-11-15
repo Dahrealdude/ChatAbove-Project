@@ -1,0 +1,59 @@
+h1 {
+    font-style: italic;
+    font-size: 40px;
+    color: white;
+}
+
+.header {
+    background-color: #54a8ec;
+    padding: 20px;
+    text-align: center;
+}
+  
+.topnav {
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+  
+/* Styles the links in nav bar */
+.topnav ul {
+    display:flex;
+    flex: left;
+    justify-content: space-between;
+    align-items: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.topnav ul :hover {
+    background-color: rgb(124, 181, 255);
+    color: rgb(255, 255, 255);
+}
+
+
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+  
+  
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+  
+.space {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
