@@ -18,21 +18,30 @@ class LandingPage extends React.Component {
 
     render() {
         return(
-            <div className="nav">
-                <h2>Sign In</h2>
-                <form className="form">
-                    <div>
-                        <input type="text" value={this.state.userEmail} onChange={this._updateuserEmail} placeholder="Email"/>   
-                    </div>
+            
+            <div>
+                <div className="nav">
 
-                    <div>
-                        <input type="text" value={this.state.userPassword} onChange={this._updateuserPassword} placeholder="Password"/>
-                    </div>
-                </form>
-                
-                <p>{this.state.userEmail}</p>
-                <p>{this.state.userPassword}</p>
-                <button className="button" onClick={this._addLogin}>Login</button>
+                    <form className="form">
+                        
+                        <h1>Sign In</h1>
+
+                        <div>
+                            <input type="text" value={this.state.userEmail} onChange={this._updateuserEmail} placeholder="Email"/>   
+                        </div>
+
+                        <div>
+                            <input type="text" value={this.state.userPassword} onChange={this._updateuserPassword} placeholder="Password"/>
+                        </div>
+
+                        <p>{this.state.userEmail}</p>
+                        <p>{this.state.userPassword}</p>
+
+                        <button className="button" onClick={this._addLogin}>Login</button>
+
+                    </form>
+                </div>
+
             </div>
         )
     }

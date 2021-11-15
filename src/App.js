@@ -1,4 +1,4 @@
-import './App.css';
+import './Achatabove.css';
 import Contacts from './Components/Contacts';
 import LandingPage from './Components/LandingPage';
 import Dashboard from './Components/Dashboard';
@@ -9,14 +9,12 @@ import NewContact from './Components/NewContact'
 import NewGroup from './Components/NewGroup'
 
 import {
-  Link,
   Route,
-  Routes,
-  Outlet,
+  Routes
 } from 'react-router-dom';
 
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, setDoc, doc } from 'firebase/firestore/lite';
+import { getFirestore } from 'firebase/firestore/lite';
 import NewMessage from './Components/NewMessage';
 
 const firebaseConfig = {
@@ -47,7 +45,7 @@ function App() {
   return (
     <div className="App">
       {/* <button onClick={addData}>Add Data</button> */}
-      <nav>
+      {/* <nav>
         <ul>
 
           <li>
@@ -85,7 +83,7 @@ function App() {
         </ul>
       </nav>
       
-        <Outlet/>
+        <Outlet/> */}
       
       <Routes>
         <Route path="/home" element={<Home />} />

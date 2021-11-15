@@ -1,5 +1,10 @@
 import React from "react";
 import { setDoc, doc } from "firebase/firestore/lite";
+import {
+    Link,
+    Outlet
+  } from 'react-router-dom';
+
 
 class NewGroup extends React.Component {
     
@@ -21,25 +26,76 @@ class NewGroup extends React.Component {
 
     render() {
         return(
+            
             <div>
-                <h2 className="newgroup">New Group</h2>
-                <div className="groupname">
-                    <input type="text" value={this.state.groupName} onChange={this._updateGroupName} placeholder="Enter your group name"/>
+                <div>
+                    <div className='header'>
+                        <h1>A Chat Above</h1>
+                    </div>
+                
+                    <nav className='topnav'>
+                        <ul>
+
+                            <li>
+                                <Link to="/home">Home</Link>
+                            </li>
+
+                            <li>
+                                <Link to="/contacts">Contacts</Link>
+                            </li>
+
+                            <li>
+                                <Link to="/dashboard">Dashboard</Link>
+                            </li>
+
+                            <li>
+                                <Link to="/messages">Messages</Link>
+                            </li>
+
+                            <li>
+                                <Link to="/newcontact">New Contact</Link>
+                            </li>
+
+                            <li>
+                                <Link to="/newgroup">New Group</Link>
+                            </li>
+
+                            <li>
+                                <Link to="/newmessage">New Message</Link>
+                            </li>
+
+                        </ul>
+                    </nav>
+                    
+                    <Outlet/>
+                </div>
+                
+                <h1>New Group</h1>
+
+                <div className="nav">
+
+                    <form className="form">
+                        <div className="groupname">
+                            <input type="text" value={this.state.groupName} onChange={this._updateGroupName} placeholder="Enter your group name"/>
+                        </div>
+
+                        <div className="groupmember">
+                            <input type="text" value={this.state.groupMember} onChange={this._updateGroupMember} placeholder="Enter member name"/>
+                        </div>
+
+                        <div className="membernumber">
+                            <input type="text" value={this.state.memberNumber} onChange={this._updateMemberNumber} placeholder="Add member number"/>
+                        </div>
+
+                        <p>{this.state.groupName}</p>
+                        <p>{this.state.groupMember}</p>
+                        <p>{this.state.memberNumber}</p>
+
+                        <button className="button"  onClick={this._addGroup}>Add Group</button>
+                    </form>
+                    
                 </div>
 
-                <div className="groupmember">
-                    <input type="text" value={this.state.groupMember} onChange={this._updateGroupMember} placeholder="Enter member name"/>
-                </div>
-
-                <div className="membernumber">
-                    <input type="text" value={this.state.memberNumber} onChange={this._updateMemberNumber} placeholder="Add member number"/>
-                </div>
-
-                <p>{this.state.groupName}</p>
-                <p>{this.state.groupMember}</p>
-                <p>{this.state.memberNumber}</p>
-
-                <button className="button"  onClick={this._addGroup}>Add Group</button>
             </div>
         )
     }
