@@ -39,7 +39,7 @@ function App() {
     <div className="App">
 
       <Routes>
-        <Route path="/landingpage" element={<LandingPage DB={DB}/>} />
+        <Route path="/landingpage" element={<LandingPage/>} />
         <Route path="/home" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/contacts" element={<Contacts />} />
