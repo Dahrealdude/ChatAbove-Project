@@ -20,9 +20,9 @@ class LandingPage extends React.Component {
         return(
             
             <div>
-                <div className="nav">
+                <div className="sign-in_form">
 
-                    <form className="form">
+                    <form>
                         
                         <h2>Sign In</h2>
 
@@ -37,8 +37,8 @@ class LandingPage extends React.Component {
                        
                         <p>{this.state.userEmail}</p>
                         <p>{this.state.userPassword}</p>
-
-                        <button className="button" onClick={this._addLogin}>Login</button>
+                        
+                        <button className="button"  onClick={this._addLogin}>Login</button>
   
                     </form>
                 </div>

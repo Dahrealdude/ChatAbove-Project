@@ -107,7 +107,10 @@ input {
   margin-bottom:10px;
 }
 
-form {
-  padding: 1rem;
+.sign-in_form {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
