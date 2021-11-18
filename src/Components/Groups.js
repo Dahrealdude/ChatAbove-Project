@@ -2,10 +2,11 @@ import React from "react";
 import {
     Link,
     Outlet
-  } from 'react-router-dom';
+} from 'react-router-dom';
+import Nav from './Nav'
 
 
-  export default function Groups() {
+export default function Groups() {
     return (
             
         <div>
@@ -13,8 +14,8 @@ import {
                 <div className='header'>
                     <h1>A Chat Above</h1>
                 </div>
-                
-                <nav className='topnav'>
+                <Nav />
+                {/* <nav className='topnav'>
 
                     <ul>
                         <Link to="/home">Home</Link>
@@ -25,7 +26,7 @@ import {
 
                 </nav>
                     
-                <Outlet/>
+                <Outlet/> */}
                 </div>
                 
                 <h1>Groups</h1>

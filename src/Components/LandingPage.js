@@ -20,7 +20,6 @@ export default function LandingPage() {
                         <input type="text" placeholder="Password"/>
                     </div>
 
-
                     <Link to="/home">
                         <button className="button">Login</button>
                     </Link>
