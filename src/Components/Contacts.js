@@ -1,5 +1,6 @@
 import React from 'react'
 import{collection, query, getDocs, doc, setDoc } from "firebase/firestore/lite";
+import Nav from './Nav'
 
 
 
@@ -42,11 +43,13 @@ componentDidMount() {
         return (
             <div>
                 
+                
                 <div className='header'>
                     <h1>A Chat Above</h1>
                 </div>
+                <Nav />
                 
-                <nav className='topnav'>
+                {/* <nav className='topnav'>
 
                     <ul>
                         <Link to="/home">Home</Link>
@@ -56,8 +59,8 @@ componentDidMount() {
                     </ul>
                     
                 </nav>
-                
-                <Outlet/>
+                 */}
+                {/* <Outlet/>  */}
 
                 <h1>Contacts</h1>
                 <br></br>
@@ -73,16 +76,6 @@ componentDidMount() {
                 
             </div>
         )
-    }
-    _updateContacts(querySnapshot) {
-        let contactsData = [];
-        querySnapshot.forEach((document) => {
-            contactsData.push(document.data());
-        });
-        this.setState({contacts: contactsData});
-        {this.state.contacts.map(function(contact){
-            return <p>{contact.fullName}</p>
-        })}
     }
 }
 

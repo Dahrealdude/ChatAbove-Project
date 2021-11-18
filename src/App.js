@@ -40,11 +40,7 @@ function App() {
 
       <Routes>
         <Route path="/landingpage" element={<LandingPage DB={DB}/>} />
-        <Route path="/home" element={<Home />} />
-<<<<<<< HEAD
-=======
-        <Route path="/contacts" element={<Contacts DB={DB} />} />
->>>>>>> e860b7b22688f354dac8b2a2a904bdbd310de15a
+        <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/contacts" element={<Contacts DB={DB}/>} />
         <Route path="/messages" element={<Messages DB={DB}/>}/>
