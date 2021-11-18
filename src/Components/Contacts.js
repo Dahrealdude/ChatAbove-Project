@@ -74,6 +74,16 @@ componentDidMount() {
             </div>
         )
     }
+    _updateContacts(querySnapshot) {
+        let contactsData = [];
+        querySnapshot.forEach((document) => {
+            contactsData.push(document.data());
+        });
+        this.setState({contacts: contactsData});
+        {this.state.contacts.map(function(contact){
+            return <p>{contact.fullName}</p>
+        })}
+    }
 }
 
                 
