@@ -25,7 +25,7 @@ import {
                     
                 <Outlet/>
             </div>
-            
+
             <h1>Messages</h1>
             <div class="row">
 
@@ -34,6 +34,7 @@ import {
                     <div class="space">
                     </div>
                 </div>
+                
             </div>
         </div>
     )
