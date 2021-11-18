@@ -14,37 +14,14 @@ export default function Dashboard() {
                 </div>
                 
                 <nav className='topnav'>
+
                     <ul>
-
-                        <li>
-                            <Link to="/home">Home</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/contacts">Contacts</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/dashboard">Dashboard</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/messages">Messages</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/newcontact">New Contact</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/newgroup">New Group</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/newmessage">New Message</Link>
-                        </li>
-
+                        <Link to="/home">Home</Link>
+                        <Link to="/contacts">Contacts</Link>
+                        <Link to="/messages">Messages</Link>
+                        <Link to="/groups">Groups</Link>
                     </ul>
+                    
                 </nav>
                 
                 <Outlet/>
@@ -53,9 +30,9 @@ export default function Dashboard() {
             <h1>Dashboard</h1>
 
             <div className='dashInfo'>
-                <span className='dashContacts'>Number of Contacts<p>13</p></span><br></br>
-                <span className='dashGroups'>Number of Groups<p>13</p></span><br></br>
-                <span className='dashMessages'>Number of Messages<p>13</p></span>
+                <span className='dashMessages'><h3>Number of Messages</h3><p>4</p></span>
+                <span className='dashContacts'><h3>Number of Contacts</h3><p>10</p></span><br></br>
+                <span className='dashGroups'><h3>Number of Groups</h3><p>12</p></span><br></br>
             </div>
 
         </div>

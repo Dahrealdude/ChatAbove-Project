@@ -8,31 +8,22 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: scroll;
 }
 
 .Contacts {
   display: flex;
   flex: left;
   gap: 30px;
-  
-  
-  /* flex-direction: row;
-  justify-content: center; 
-  align-items: center; 
-  margin-right: 30%; 
-  margin-left: 30%; */
-} 
-
-.Search {
-  display:flex;
-  flex: left;
-  justify-content: space-between;
+  color:rgb(0, 0, 0);
   align-items: center;
-} 
-
-.nav {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 700;
   text-align: center;
-}
+} 
 
 nav{
   background-color: white;
@@ -53,39 +44,43 @@ nav li {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  
 }
   
 .dashContacts {
-  flex: 1;
-  margin: 0px 20px;
-  padding: 30px;
+  flex: 2;
+  margin: 0px 10px;
+  padding: 20px;
   border-radius: 10px;
-  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-  box-shadow: 5px 5px 15px 5px #000000;
+  -webkit-box-shadow: 5px 5px 15px 5px rgb(31, 31, 182); 
+  box-shadow: 5px 5px 15px 5px rgb(91, 91, 235);
   font-size: 20px;
   font-weight: bold;
+  background-color: white;
 }
   
 .dashGroups {
   flex: 2;
-  margin: 0px 20px;
-  padding: 30px;
+  margin: 0px 10px;
+  padding: 20px;
   border-radius: 10px;
-  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-  box-shadow: 5px 5px 15px 5px #000000;
+  -webkit-box-shadow: 5px 5px 15px 5px rgb(31, 31, 182); 
+  box-shadow: 5px 5px 15px 5px rgb(91, 91, 235);
   font-size: 20px;
   font-weight: bold;
+  background-color: white;
 }
   
 .dashMessages{
-  flex: 3;
-  margin: 0px 20px;
-  padding: 30px;
+  flex: 2;
+  margin: 0px 10px;
+  padding: 20px;
   border-radius: 10px;
-  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-  box-shadow: 5px 5px 15px 5px #000000;
+  -webkit-box-shadow: 5px 5px 15px 5px rgb(31, 31, 182); 
+  box-shadow: 5px 5px 15px 5px rgb(91, 91, 235);
   font-size: 20px;
   font-weight: bold;
+  background-color: white;
 }
 
 
@@ -113,77 +108,6 @@ input {
 }
 
 form {
-
   padding: 1rem;
 }
 
-.messageslist__heading{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* .search-btn {
-  height: 35px;
-  border: rgb(249, 249, 252) solid 2px;
-  background-color: rgb(156, 195, 247);
-  outline: none;
-  width: 10%;
-  cursor: pointer;
-  font-size: 10px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.02);
-  margin: 10px;
-} */
-
-.btn-1{
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-  font-size: 10px;
-  cursor: pointer;
-  padding: 10px;
-  color: blue;
-  outline: none
-}
-
-
-
-.btn {
-  background-color: rgb(156, 195, 247);
-  color:rgb(8, 8, 8);
-  border: rgb(249, 249, 252) solid 2px;
-  outline: none;
-  cursor: pointer;
-  width:150px;
-  height: 35px;
-  line-height: 40px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.02);
-  display: flex;
-  padding: 0;
-  transition: all 0.3s ease-in-out;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-.search-input {
-  height: 5px;
-  width: 125px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.02);
-}
-
-/* .groupname, .groupmember, .membernumber, .group-btn{
-  margin-left: 300px;
-}
-
-.fullname, .phonenumber, .relationship, .contact-btn {
-  margin-left: 300px
-}
-
-.name, .number, .message, .message-btn{
-  margin-left: 300px
-} */

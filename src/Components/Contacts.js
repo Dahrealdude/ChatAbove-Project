@@ -16,48 +16,25 @@ class Contacts extends React.Component {
                 </div>
                 
                 <nav className='topnav'>
+
                     <ul>
-
-                        <li>
-                            <Link to="/home">Home</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/contacts">Contacts</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/dashboard">Dashboard</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/messages">Messages</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/newcontact">New Contact</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/newgroup">New Group</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/newmessage">New Message</Link>
-                        </li>
-
+                        <Link to="/home">Home</Link>
+                        <Link to="/dashboard">Dashboard</Link>
+                        <Link to="/messages">Messages</Link>
+                        <Link to="/groups">Groups</Link>
                     </ul>
+                    
                 </nav>
                     
                 <Outlet/>
-                
-                <h1>Contacts</h1>
 
+                <h1>Contacts</h1>
+                <br></br>
                 <div className='Contacts'>
                     {Data.map(function(contact) {
                         return (
                             <div>
-                                <br></br>
+                                
                                 <img style={{width: '100px', height: '100px'}} src={contact.imageUrl} alt={""}/>
                                 <p>{contact.name}</p>
                                 <p>{contact.number}</p>
