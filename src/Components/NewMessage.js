@@ -3,7 +3,8 @@ import { setDoc, doc } from "firebase/firestore/lite";
 import {
     Link,
     Outlet
-  } from 'react-router-dom';
+} from 'react-router-dom';
+import Nav from './Nav'
 
 
 class NewMessage extends React.Component {
@@ -31,15 +32,15 @@ class NewMessage extends React.Component {
                     <div className='header'>
                         <h1>A Chat Above</h1>
                     </div>
-                
-                    <nav className='topnav'>
+                        <Nav />
+                    {/* <nav className='topnav'>
 
                         <ul>
                             <Link to="/home">Home</Link>
                         </ul>
                     </nav>
                     
-                    <Outlet/>
+                    <Outlet/> */}
                 </div>
 
                 <h1>New Messages</h1>

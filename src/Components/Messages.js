@@ -3,6 +3,7 @@ import {
     Link,
     Outlet
   } from 'react-router-dom';
+import Nav from './Nav'
 
   export default function Messages() {
     return (
@@ -11,8 +12,10 @@ import {
                 <div className='header'>
                     <h1>A Chat Above</h1>
                 </div>
+
+                <Nav />
                 
-                <nav className='topnav'>
+                {/* <nav className='topnav'>
 
                     <ul>
                         <Link to="/home">Home</Link>
@@ -23,7 +26,7 @@ import {
                         
                 </nav>
                     
-                <Outlet/>
+                <Outlet/> */}
             </div>
 
             <h1>Messages</h1>
