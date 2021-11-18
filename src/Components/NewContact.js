@@ -33,37 +33,11 @@ class NewContact extends React.Component {
                     </div>
                 
                     <nav className='topnav'>
+
                         <ul>
-
-                            <li>
-                                <Link to="/home">Home</Link>
-                            </li>
-
-                            <li>
-                                <Link to="/contacts">Contacts</Link>
-                            </li>
-
-                            <li>
-                                <Link to="/dashboard">Dashboard</Link>
-                            </li>
-
-                            <li>
-                                <Link to="/messages">Messages</Link>
-                            </li>
-
-                            <li>
-                                <Link to="/newcontact">New Contact</Link>
-                            </li>
-
-                            <li>
-                                <Link to="/newgroup">New Group</Link>
-                            </li>
-
-                            <li>
-                                <Link to="/newmessage">New Message</Link>
-                            </li>
-
+                            <Link to="/home">Home</Link>
                         </ul>
+                        
                     </nav>
                     
                 <Outlet/>

@@ -24,7 +24,7 @@ class LandingPage extends React.Component {
 
                     <form className="form">
                         
-                        <h1>Sign In</h1>
+                        <h2>Sign In</h2>
 
                         <div>
                             <input type="text" value={this.state.userEmail} onChange={this._updateuserEmail} placeholder="Email"/>   
