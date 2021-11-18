@@ -34,11 +34,12 @@ class LandingPage extends React.Component {
                             <input type="text" value={this.state.userPassword} onChange={this._updateuserPassword} placeholder="Password"/>
                         </div>
 
+                       
                         <p>{this.state.userEmail}</p>
                         <p>{this.state.userPassword}</p>
 
                         <button className="button" onClick={this._addLogin}>Login</button>
-
+  
                     </form>
                 </div>
 
