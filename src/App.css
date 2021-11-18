@@ -1,26 +1,38 @@
 .App {
-  text-align: right;
-  height: 1200px;
-  width: 1200px;
-}
-
-.LandingPage {
-  height: 800px;
-  width: 2000px;
-  /* background-image: url(""); */
+  position: fixed;
+  top: 0;
+  background-image: url("https://i.pinimg.com/originals/eb/ef/68/ebef680475fc9fa58c0618c2697ed867.jpg");
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: scroll;
 }
 
 .Contacts {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
+  display: flex;
+  flex: left;
+  gap: 30px;
+  color:rgb(0, 0, 0);
   align-items: center;
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+} 
+
+nav{
+  background-color: white;
 }
 
-.nav{
+nav ul{
   display:flex;
-  flex-direction: row;
-  justify-content: center;
+  flex: left;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -32,54 +44,59 @@ nav li {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  }
   
-  .dashContacts {
-  flex: 1;
-  margin: 0px 20px;
-  padding: 30px;
-  border-radius: 10px;
-  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-  box-shadow: 5px 5px 15px 5px #000000;
-  font-size: 20px;
-  font-weight: bold;
-  }
+}
   
-  .dashGroups {
+.dashContacts {
   flex: 2;
-  margin: 0px 20px;
-  padding: 30px;
+  margin: 0px 10px;
+  padding: 20px;
   border-radius: 10px;
-  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-  box-shadow: 5px 5px 15px 5px #000000;
+  -webkit-box-shadow: 5px 5px 15px 5px rgb(31, 31, 182); 
+  box-shadow: 5px 5px 15px 5px rgb(91, 91, 235);
   font-size: 20px;
   font-weight: bold;
-  }
+  background-color: white;
+}
   
-  .dashMessages{
-  flex: 3;
-  margin: 0px 20px;
-  padding: 30px;
+.dashGroups {
+  flex: 2;
+  margin: 0px 10px;
+  padding: 20px;
   border-radius: 10px;
-  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-  box-shadow: 5px 5px 15px 5px #000000;
+  -webkit-box-shadow: 5px 5px 15px 5px rgb(31, 31, 182); 
+  box-shadow: 5px 5px 15px 5px rgb(91, 91, 235);
   font-size: 20px;
   font-weight: bold;
-  }
+  background-color: white;
+}
+  
+.dashMessages{
+  flex: 2;
+  margin: 0px 10px;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgb(31, 31, 182); 
+  box-shadow: 5px 5px 15px 5px rgb(91, 91, 235);
+  font-size: 20px;
+  font-weight: bold;
+  background-color: white;
+}
 
-  button {
-    width: 180px;
-    margin: auto;
-    margin-top: 25px;
-    color: #fff;
-    background: #42b721;
-    border: 1px solid #42b72a;
-    outline: none;
-    font-size: 16px;
-    padding: 16px;
-    line-height: 20px;
-    cursor: pointer;
-    border-radius: 6px;
+
+.button {
+  width: 180px;
+  margin: auto;
+  margin-top: 25px;
+  color: #fff;
+  background: #42b721;
+  border: 1px solid #42b72a;
+  outline: none;
+  font-size: 16px;
+  padding: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
 input {
@@ -91,6 +108,6 @@ input {
 }
 
 form {
-  border:0.1rem solid #cfcfcf;
   padding: 1rem;
 }
+
