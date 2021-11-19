@@ -88,10 +88,10 @@ class NewGroup extends React.Component {
         this.setState({memberNumber: event.target.value})
     }
 
-  
+
     _addGroup() {
 
-        setDoc(doc(this.props.DB, "New Group", this.state.groupName), {
+        setDoc(doc(this.props.DB, "groups", this.state.groupName), {
             groupName:this.state.groupName,
             groupMember: this.state.groupMember,
             memberNumber:this.state.memberNumber,

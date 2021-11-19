@@ -47,7 +47,7 @@ nav li {
   
 }
   
-.dashContacts {
+.dashContacts{
   flex: 2;
   margin: 0px 10px;
   padding: 20px;
@@ -69,7 +69,7 @@ nav li {
   font-size: 20px;
   font-weight: bold;
   background-color: white;
-}
+} 
   
 .dashMessages{
   flex: 2;
@@ -107,10 +107,37 @@ input {
   margin-bottom:10px;
 }
 
+
+/* new addition to the sign in page  */
 .sign-in_form {
   display:flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
+
+input[type="text"] {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  padding:14px;
+  border-radius:8px;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 20px;
+}
+  
+form {
+  border: 0.1rem solid #cfcfcf;
+  padding:3rem;
+  border-radius: 5px;
+  box-shadow: 10px;
+  background: #fff;
+  position: relative;
+  top:150px;
+}
+
+
 

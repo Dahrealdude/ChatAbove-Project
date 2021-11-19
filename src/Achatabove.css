@@ -18,6 +18,14 @@ h3 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
 }
+
+h4 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
 .header {
     background-color: #54a8ec;
     padding: 20px;
@@ -50,15 +58,14 @@ h3 {
     color: rgb(14, 108, 250);
 }
 
-.row {
-    overflow: scroll;
-}
+/* .row {
+    /* overflow: scroll;
+} */
 
 
 .leftcolumn {   
     float: left;
     width: 75%;
-
 }
 
 .space {
