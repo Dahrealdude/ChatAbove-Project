@@ -17,7 +17,7 @@ export default function Home() {
                     
                 <ul>
                     <Link to="/dashboard">Dashboard</Link>
-                    <Link to="/landingpage">Sign In</Link>
+                    <Link to="/">Sign In</Link>
                     <Link to="/contacts">Contacts</Link>
                     <Link to="/messages">Messages</Link>
                     <Link to="/groups">Groups</Link>

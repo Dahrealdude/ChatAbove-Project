@@ -12,7 +12,7 @@ export default function LandingPage() {
 
                     <form>
                         
-                        <h2>Sign In</h2>
+                        <h4>Sign In</h4>
 
                         <div>
                             <input type="text" placeholder="Email"/>   
