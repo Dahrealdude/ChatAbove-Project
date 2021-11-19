@@ -2,7 +2,7 @@ import React from 'react'
 import {
     Link,
     Outlet
-  } from 'react-router-dom';
+} from 'react-router-dom';
 
 
 export default function Home() {
@@ -34,8 +34,8 @@ export default function Home() {
 
                 <div class="leftcolumn">
 
-                    <div class="space">
-                        <p>
+                    <div className="space">
+                        <p className="space-text">
                             A Chat Above is the best way to chat with everyone you know. 
                             It's absolutely free, whether you're talking to a group of friends, or texting with one person. 
                             Best of all, it works on nearly every phone, via push or SMS. With A Chat Above, it's easy to reach anyone, anytime, anywhere.
