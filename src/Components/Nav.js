@@ -1,8 +1,5 @@
 import React from "react";
-import {
-    Link,
-    Outlet
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export default class Nav extends React.Component {
@@ -11,14 +8,12 @@ export default class Nav extends React.Component {
             <nav className='topnav'>
 
                 <ul>
+                    <Link to="/"></Link>
                     <Link to="/dashboard">Dashboard</Link>
-                    <Link to="/">Sign In</Link>
-                    <Link to="/contacts">Contacts</Link>
                     <Link to="/messages">Messages</Link>
+                    <Link to="/contacts">Contacts</Link>
                     <Link to="/groups">Groups</Link>
-                    <Link to="/newcontact">New Contact</Link>
-                    <Link to="/newgroup">New Group</Link>
-                    <Link to="/newmessage">New Message</Link>
+                    <Link to="/"></Link>
                 </ul>
 
             </nav>

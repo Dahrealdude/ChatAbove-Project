@@ -1,10 +1,7 @@
 import React from "react";
-import {
-    Link,
-    Outlet
-} from 'react-router-dom';
-import{collection, query, getDocs, doc, setDoc } from "firebase/firestore/lite";
-import Nav from './Nav'
+import{collection, query, getDocs } from "firebase/firestore/lite";
+import Nav from './Nav';
+import NewGroup from "./NewGroup";
 
 
 export default class Groups extends React.Component {
@@ -36,44 +33,35 @@ export default class Groups extends React.Component {
         })
     }
     render(){
-    return (
-            
-        <div>
+        return (
+                
             <div>
-                <div className='header'>
-                    <h1>A Chat Above</h1>
+                <div>
+                    <div className='header'>
+                        <h1>A Chat Above</h1>
+                    </div>
+
+                    <Nav />
+                        
+                    <h1>Groups</h1>
+                    <br></br>
+
+                    <div className="Groups">
+                        {this.state.loading === true && <p>loading...</p>}
+                        {!this.state.loading && this.state.Groups.map(function(Groups){
+
+                            return(<div key={Groups.groupMember}>
+
+                                <p>{Groups.groupName}</p>
+                                <p>{Groups.groupMember} | {Groups.memberNumber}</p>
+                                </div>)
+                            })
+                        }
+                    </div>
+                    <br></br>
+                    <NewGroup />
                 </div>
-                <Nav />
-                {/* <nav className='topnav'>
-
-                    <ul>
-                        <Link to="/home">Home</Link>
-                        <Link to="/dashboard">Dashboard</Link>
-                        <Link to="/contacts">Contacts</Link>
-                        <Link to="/messages">Messages</Link>
-                    </ul>
-
-                </nav>
-                    
-                <Outlet/> */}
-                </div>
-                    
-                <h1>Groups</h1>
-                <br></br>
-                <div className="row">
-                {this.state.loading === true && <p>loading...</p>}
-                    {!this.state.loading && this.state.Groups.map(function(Groups){
-                        return(<div key={Groups.groupMember}>
-                            <p>{Groups.groupName}</p>
-                            <p>{Groups.groupMember} | {Groups.memberNumber}</p>
-                            </div>)
-                    })}
-                    
-
             </div>
-
-
-        </div>
-    )
-}
+        )
+    }
 }

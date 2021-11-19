@@ -1,13 +1,7 @@
-import React from 'react'
-import{collection, query, getDocs, doc, setDoc } from "firebase/firestore/lite";
-import Nav from './Nav'
-
-
-
-import {
-    Link,
-    Outlet
-} from 'react-router-dom';
+import React from 'react';
+import{collection, query, getDocs } from "firebase/firestore/lite";
+import Nav from './Nav';
+import NewContact from "./NewContact";
 
 export default class Contacts extends React.Component {
     constructor() {
@@ -43,24 +37,11 @@ componentDidMount() {
         return (
             <div>
                 
-                
                 <div className='header'>
                     <h1>A Chat Above</h1>
                 </div>
-                <Nav />
-                
-                {/* <nav className='topnav'>
 
-                    <ul>
-                        <Link to="/home">Home</Link>
-                        <Link to="/dashboard">Dashboard</Link>
-                        <Link to="/messages">Messages</Link>
-                        <Link to="/groups">Groups</Link>
-                    </ul>
-                    
-                </nav>
-                 */}
-                {/* <Outlet/>  */}
+                <Nav />
 
                 <h1>Contacts</h1>
                 <br></br>
@@ -73,17 +54,10 @@ componentDidMount() {
                             </div>)
                     })}
                 </div>
-                
+                <br></br>
+                <NewContact />
+
             </div>
         )
     }
 }
-
-                
-
-/**"Contacts"
- * Search Bar input box
- * First name last name column
- * Phone number column
- * Date Added column
- */

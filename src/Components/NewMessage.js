@@ -1,10 +1,6 @@
 import React from "react"
 import { setDoc, doc } from "firebase/firestore/lite";
-import {
-    Link,
-    Outlet
-} from 'react-router-dom';
-import Nav from './Nav'
+
 
 
 class NewMessage extends React.Component {
@@ -28,24 +24,8 @@ class NewMessage extends React.Component {
     render() {
         return(
             <div>
+                
                 <div>
-                    <div className='header'>
-                        <h1>A Chat Above</h1>
-                    </div>
-                        <Nav />
-                    {/* <nav className='topnav'>
-
-                        <ul>
-                            <Link to="/home">Home</Link>
-                        </ul>
-                    </nav>
-                    
-                    <Outlet/> */}
-                </div>
-
-                <h1>New Messages</h1>
-
-                <div className="nav">
                     <form className="form">
 
                         <div>
@@ -57,13 +37,17 @@ class NewMessage extends React.Component {
                         </div>
 
                         <div className="message">
-                            <input type="text" value={this.state.newMessage} onChange={this._updatenewMessage} placeholder="Enter new message"/>
+                            <input id="message" type="text" value={this.state.newMessage} onChange={this._updatenewMessage} placeholder="Enter new message"/>
+                            <button className="submitButton" onClick={this._addMessage}>Send</button>
                         </div>
                         
                         <p>{this.state.fullName}</p>
                         <p>{this.state.phoneNumber}</p>
                         <p>{this.state.newMessage}</p>
-                        <button className="button" onClick={this._addMessage}>Send</button>
+                      
+                        
+                
+                        
                         
                     </form>
                 </div> 
@@ -102,10 +86,3 @@ class NewMessage extends React.Component {
 }
 
 export default NewMessage
-
-/**"New Message" text with cancel button 
- * To input search box with create a group option
- * A div to display message once sent
- * Input box for the message being created with a send button
-*/
-
