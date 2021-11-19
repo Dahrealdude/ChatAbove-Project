@@ -107,11 +107,8 @@ input {
   margin-bottom:10px;
 }
 
-.sign-in_form {
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+form {
+  padding: 1rem;
 }
 
 
