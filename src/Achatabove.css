@@ -59,7 +59,7 @@ h4 {
 }
 
 .row {
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 
