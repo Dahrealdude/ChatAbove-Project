@@ -1,10 +1,5 @@
 import React from "react"
 import { setDoc, doc } from "firebase/firestore/lite";
-import {
-    Link,
-    Outlet
-} from 'react-router-dom';
-import Nav from './Nav'
 
 class NewContact extends React.Component {
     constructor(props) {
@@ -29,42 +24,23 @@ class NewContact extends React.Component {
             
             <div>
                 <div>
-                    <div className='header'>
-                        <h1>A Chat Above</h1>
-                    </div>
-                    <Nav />
-                
-                    {/* <nav className='topnav'>
-
-                        <ul>
-                            <Link to="/home">Home</Link>
-                        </ul>
-                        
-                    </nav>
-                    
-                <Outlet/> */}
-                </div>
-                
-                <h1>New Contact</h1>
-                
-                <div className="nav">
-                    <form className="sign-in_form">
-                        <div className="fullname">
+                    <form className="forms">
+                        <div className="input">
                             <input type="text" value={this.state.fullName} onChange={this._updatefullName} placeholder="Enter full name"/>   
                         </div>
 
-                        <div className="phonenumber">
+                        <div className="input">
                             <input type="text" value={this.state.phoneNumber} onChange={this._updatephoneNumber} placeholder="Enter phone number"/>
                         </div>
 
-                        <div className="relationship">
+                        <div className="input">
                             <input type="text" value={this.state.relationship} onChange={this._updaterelationship} placeholder="How do you know this person"/>
+                            <button className="inputButton"  onClick={this._addContact}>Add Contact</button>
                         </div>
                         
                         <p>{this.state.fullName}</p>
                         <p>{this.state.phoneNumber}</p>
                         <p>{this.state.relationship}</p>
-                        <button className="button"  onClick={this._addContact}>Add Contact</button>
                     </form>
                 </div>
 
@@ -102,12 +78,3 @@ class NewContact extends React.Component {
 }
 
 export default NewContact
-
-
-/**"New Contact" text with a cancel and done option
- * Add photo option
- * First name input
- * Last name input
- * Phone number input
- * Company/How you met input
- */

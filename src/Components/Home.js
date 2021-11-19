@@ -1,8 +1,4 @@
 import React from 'react'
-import {
-    Link,
-    Outlet
-} from 'react-router-dom';
 import Nav from './Nav'
 
 
@@ -14,8 +10,7 @@ export default function Home() {
                 <h1>A Chat Above</h1>
             </div>
       
-                <Nav />
-                <Outlet/>
+            <Nav />
 
             <div class="row">
 

@@ -22,7 +22,7 @@ export default function LandingPage() {
                             <input type="text" placeholder="Password"/>
                         </div>
 
-                        <Link to="/home">
+                        <Link to="/dashboard">
                             <button className="button">Login</button>
                         </Link>
                         
@@ -32,8 +32,3 @@ export default function LandingPage() {
             </div>
     )
 }
-
-/**Logo 
- * Welcome
- * info text
- * Login button */

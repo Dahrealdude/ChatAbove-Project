@@ -1,10 +1,5 @@
 import React from "react";
 import { setDoc, doc } from "firebase/firestore/lite";
-import {
-    Link,
-    Outlet
-} from 'react-router-dom';
-import Nav from './Nav'
 
 
 class NewGroup extends React.Component {
@@ -29,45 +24,27 @@ class NewGroup extends React.Component {
         return(
             
             <div>
+
                 <div>
-                    <div className='header'>
-                        <h1>A Chat Above</h1>
-                    </div>
-                    <Nav />
-                
-                    {/* <nav className='topnav'>
 
-                        <ul>
-                            <Link to="/home">Home</Link>
-                        </ul>
-
-                    </nav>
-                    
-                    <Outlet/> */}
-                </div>
-                
-                <h1>New Group</h1>
-
-                <div className="nav">
-
-                    <form className="form">
-                        <div className="groupname">
+                    <form className="forms">
+                        <div className="input">
                             <input type="text" value={this.state.groupName} onChange={this._updateGroupName} placeholder="Enter your group name"/>
                         </div>
 
-                        <div className="groupmember">
+                        <div className="input">
                             <input type="text" value={this.state.groupMember} onChange={this._updateGroupMember} placeholder="Enter member name"/>
                         </div>
 
-                        <div className="membernumber">
+                        <div className="input">
                             <input type="text" value={this.state.memberNumber} onChange={this._updateMemberNumber} placeholder="Add member number"/>
+                            <button className="inputButton"  onClick={this._addGroup}>Add Group</button>
                         </div>
 
                         <p>{this.state.groupName}</p>
                         <p>{this.state.groupMember}</p>
                         <p>{this.state.memberNumber}</p>
 
-                        <button className="button"  onClick={this._addGroup}>Add Group</button>
                     </form>
                     
                 </div>

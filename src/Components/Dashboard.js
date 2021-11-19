@@ -1,32 +1,16 @@
 import React from 'react'
 import '../App.css'
-import {
-    Link,
-    Outlet
-} from 'react-router-dom';
 import Nav from './Nav'
 
 export default function Dashboard() {
     return (
         <div>
-            <div>
-                <div className='header'>
-                    <h1>A Chat Above</h1>
-                </div>
-                <Nav />
-                {/* <nav className='topnav'>
-
-                    <ul>
-                        <Link to="/home">Home</Link>
-                        <Link to="/contacts">Contacts</Link>
-                        <Link to="/messages">Messages</Link>
-                        <Link to="/groups">Groups</Link>
-                    </ul>
-                    
-                </nav>
-                
-                <Outlet/> */}
+          
+            <div className='header'>
+                <h1>A Chat Above</h1>
             </div>
+
+            <Nav />
 
             <h1>Dashboard</h1>
 
