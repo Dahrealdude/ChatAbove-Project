@@ -3,6 +3,7 @@ import {
     Link,
     Outlet
 } from 'react-router-dom';
+import Nav from './Nav'
 
 
 export default function Home() {
@@ -12,22 +13,8 @@ export default function Home() {
             <div className='header'>
                 <h1>A Chat Above</h1>
             </div>
-                
-            <nav className='topnav'>
-                    
-                <ul>
-                    <Link to="/dashboard">Dashboard</Link>
-                    <Link to="/">Sign In</Link>
-                    <Link to="/contacts">Contacts</Link>
-                    <Link to="/messages">Messages</Link>
-                    <Link to="/groups">Groups</Link>
-                    <Link to="/newcontact">New Contact</Link>
-                    <Link to="/newgroup">New Group</Link>
-                    <Link to="/newmessage">New Message</Link>
-                </ul>
-                    
-            </nav>
-                
+      
+                <Nav />
                 <Outlet/>
 
             <div class="row">
