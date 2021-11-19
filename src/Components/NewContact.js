@@ -48,7 +48,7 @@ class NewContact extends React.Component {
                 <h1>New Contact</h1>
                 
                 <div className="nav">
-                    <form className="form">
+                    <form className="sign-in_form">
                         <div className="fullname">
                             <input type="text" value={this.state.fullName} onChange={this._updatefullName} placeholder="Enter full name"/>   
                         </div>
