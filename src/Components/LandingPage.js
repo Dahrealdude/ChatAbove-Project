@@ -10,9 +10,10 @@ export default function LandingPage() {
             <div>
                 <div className="sign-in_form">
 
-                    <form>
-                        
-                        <h4>Sign In</h4>
+                    <form className="signIn">
+
+                        <h4>A Chat Above</h4>
+                        <h5>Sign In</h5>
 
                         <div>
                             <input type="text" placeholder="Email"/>   
