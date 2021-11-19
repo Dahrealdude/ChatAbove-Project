@@ -39,8 +39,8 @@ function App() {
     <div className="App">
 
       <Routes>
-        <Route path="/home" element={<Home />} />
         <Route path="/" element={<LandingPage />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/contacts" element={<Contacts DB={DB}/>} />
         <Route path="/messages" element={<Messages DB={DB}/>}/>

@@ -13,6 +13,7 @@ export default function Home() {
             <div className='header'>
                 <h1>A Chat Above</h1>
             </div>
+      
                 <Nav />
                 <Outlet/>
 
