@@ -1,16 +1,37 @@
-import React from 'react'
+import React from "react"
+import { Link } from 'react-router-dom';
+import '../App.css'
 
-class LandingPage extends React.Component {
-    render(){
-        return (
-            <div className="LandingPage">
-                <h1>A Chat Above</h1>
+
+export default function LandingPage() {
+
+    return(
+            
+            <div>
+                <div className="sign-in_form">
+
+                    <form>
+                        
+                        <h2>Sign In</h2>
+
+                        <div>
+                            <input type="text" placeholder="Email"/>   
+                        </div>
+
+                        <div>
+                            <input type="text" placeholder="Password"/>
+                        </div>
+
+                        <Link to="/home">
+                            <button className="button">Login</button>
+                        </Link>
+                        
+                    </form>
+                </div>
 
             </div>
-        )
-    }
+    )
 }
-export default LandingPage;
 
 /**Logo 
  * Welcome

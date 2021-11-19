@@ -1,0 +1,72 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-shadow: 2px 2px #001aff;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color:rgb(31, 31, 182);
+}
+
+h3 {
+    color:rgb(31, 31, 182);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+.header {
+    background-color: #54a8ec;
+    padding: 20px;
+    text-align: center;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+  
+/* Styles the links in nav bar */
+.topnav ul {
+    display:flex;
+    flex: left;
+    justify-content: space-between;
+    align-items: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.topnav ul :hover {
+    background-color: rgb(124, 181, 255);
+    color: rgb(255, 255, 255);
+}
+
+.topnav a{
+    color: rgb(14, 108, 250);
+}
+
+.row {
+    overflow: scroll;
+}
+
+
+.leftcolumn {   
+    float: left;
+    width: 75%;
+
+}
+
+.space {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+img {
+    border-radius: 50%;
+}
